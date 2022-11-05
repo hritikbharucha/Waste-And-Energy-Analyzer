@@ -182,7 +182,7 @@ public class ApplicationView extends Application {
                     dataLabel.setText("");
                 }
             } else {
-                dataLabel.setText("Invalid country.");
+                dataLabel.setText("Invalid country...");
             }
         });
 
