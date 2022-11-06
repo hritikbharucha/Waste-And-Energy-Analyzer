@@ -26,6 +26,7 @@ public class ApplicationView extends Application {
 
     Stage window;
 
+    Label titleLabel;
     Label infoLabel;
     Button termsButton;
     Button tipsButton;
@@ -37,6 +38,9 @@ public class ApplicationView extends Application {
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
         window.setTitle("Waste and Energy Analyzer");
+
+        titleLabel = new Label("Welcome to Waste and Energy Data Analyzer");
+        infoLabel = new Label("Learn about sustainability and ways to take care of our planet");
 
         termsButton = new Button("Terms");
         termsButton.setMinWidth(75);
@@ -64,10 +68,10 @@ public class ApplicationView extends Application {
 
         VBox buttonsLayout = new VBox(20);
 
-        buttonsLayout.getChildren().addAll(termsButton,tipsButton,searchButton,compareButton,playButton);
+        buttonsLayout.getChildren().addAll(titleLabel,infoLabel,termsButton,tipsButton,searchButton,compareButton,playButton);
         buttonsLayout.setAlignment(Pos.CENTER);
 
-        Scene scene = new Scene(buttonsLayout, 300, 300);
+        Scene scene = new Scene(buttonsLayout, 350, 350);
         window.setScene(scene);
         window.show();
 
